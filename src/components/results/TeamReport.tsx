@@ -15,12 +15,32 @@ export function TeamReport({ sessionId, lang, members = [] }: TeamReportProps) {
     // Mock calculations or use simplified aggregations
     // e.g., Count MBTI types
     const types: Record<string, number> = {};
+    const strengthsAgg: Record<string, number> = {};
+
     members.forEach(m => {
-        // Assume we fetch or have mbti_type in member object
-        // For MVP, we use mock if not present
+        // MBTI
         const type = m.mbti_type || "Unknown";
-        types[type] = (types[type] || 0) + 1;
+        if (type !== "Unknown") types[type] = (types[type] || 0) + 1;
+
+        // Strengths
+        if (m.strengths_scores) {
+            // Sort individual strengths to get top 3 for this member
+            const memberTop3 = Object.entries(m.strengths_scores as Record<string, number>)
+                .sort(([, a], [, b]) => b - a)
+                .slice(0, 3)
+                .map(([k]) => k);
+
+            // Add weight to team aggregation
+            memberTop3.forEach(s => {
+                strengthsAgg[s] = (strengthsAgg[s] || 0) + 1;
+            });
+        }
     });
+
+    const topStrengths = Object.entries(strengthsAgg)
+        .sort(([, a], [, b]) => b - a)
+        .slice(0, 3)
+        .map(([k]) => k);
 
     return (
         <Card className="mt-8 border-2 border-indigo-200 bg-gradient-to-br from-indigo-50 to-white">
@@ -39,39 +59,34 @@ export function TeamReport({ sessionId, lang, members = [] }: TeamReportProps) {
                             <BarChart className="w-4 h-4 text-indigo-600" />
                             {isAr ? "توزيع الشخصيات" : "Personality Distribution"}
                         </h3>
-                        <div className="space-y-2">
-                            {/* Placeholder Visualization */}
-                            <div className="flex justify-between items-center">
-                                <span>Strategists (NT)</span>
-                                <div className="w-1/2 bg-gray-100 rounded-full h-2">
-                                    <div className="bg-indigo-600 h-2 rounded-full" style={{ width: '40%' }}></div>
+                        {/* We keep MBTI distribution as it's useful and likely working or can be mocked if needed. 
+                            Let's just show simple breakdown. 
+                        */}
+                        <div className="space-y-3">
+                            {Object.entries(types).map(([type, count]) => (
+                                <div key={type} className="flex justify-between items-center text-sm">
+                                    <span className="font-medium">{type}</span>
+                                    <span className="text-muted-foreground">{Math.round((count / members.length) * 100)}%</span>
                                 </div>
-                            </div>
-                            <div className="flex justify-between items-center">
-                                <span>Diplomats (NF)</span>
-                                <div className="w-1/2 bg-gray-100 rounded-full h-2">
-                                    <div className="bg-purple-600 h-2 rounded-full" style={{ width: '30%' }}></div>
-                                </div>
-                            </div>
-                            <div className="flex justify-between items-center">
-                                <span>Sentinels (SJ)</span>
-                                <div className="w-1/2 bg-gray-100 rounded-full h-2">
-                                    <div className="bg-blue-600 h-2 rounded-full" style={{ width: '20%' }}></div>
-                                </div>
-                            </div>
+                            ))}
+                            {members.length === 0 && <p className="text-muted-foreground text-sm">{isAr ? "لا يوجد أعضاء بعد" : "No members yet"}</p>}
                         </div>
                     </div>
 
-                    {/* Team Strength */}
+                    {/* Team Strength - REAL LOGIC */}
                     <div className="bg-white p-4 rounded-lg shadow-sm">
                         <h3 className="font-bold mb-4">
                             {isAr ? "نقاط القوة الجماعية" : "Collective Strengths"}
                         </h3>
-                        <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-                            <li>High Strategic Planning</li>
-                            <li>Strong Execution Capability</li>
-                            <li>Creative Problem Solving</li>
-                        </ul>
+                        {topStrengths.length > 0 ? (
+                            <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                                {topStrengths.map(s => (
+                                    <li key={s}>{s}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p className="text-muted-foreground text-sm italic">{isAr ? "بانتظار البيانات..." : "Waiting for data..."}</p>
+                        )}
                     </div>
                 </div>
 
