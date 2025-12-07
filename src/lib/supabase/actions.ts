@@ -216,8 +216,18 @@ export async function initiateAssessmentPayment(
     }
 
     if (!session) {
-        console.error("Payment Action: Session Not Found for ID:", sessionId);
-        return { success: false, error: "Session not found." };
+        // Debugging Info for Admin
+        const { data: debugSession } = await adminClient
+            .from('assessment_sessions')
+            .select('user_id')
+            .eq('id', sessionId)
+            .single();
+
+        console.error(`Payment Action Mismatch: Session ${sessionId} Owner: ${debugSession?.user_id} Current: ${user.id}`);
+        return {
+            success: false,
+            error: `Session not found. Mismatch: Auth(${user.id.slice(0, 5)}) vs Owner(${debugSession?.user_id?.slice(0, 5) || 'None'})`
+        };
     }
 
     if (session.payment_status === 'paid') {
