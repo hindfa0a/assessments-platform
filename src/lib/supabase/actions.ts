@@ -720,3 +720,33 @@ export async function checkTeamStatus(shareCode: string): Promise<{
         isReadyForAnalysis: (completedCount + 1) >= 3
     };
 }
+// ... existing code ...
+
+export async function getUserSessions() {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
+    if (!user) {
+        return { success: false, error: "Not authenticated" };
+    }
+
+    const { data: sessions, error } = await supabase
+        .from('assessment_sessions')
+        .select(`
+            *,
+            payments (
+                status,
+                amount,
+                currency
+            )
+        `)
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: false });
+
+    if (error) {
+        console.error("Error fetching sessions:", error);
+        return { success: false, error: "Failed to fetch sessions" };
+    }
+
+    return { success: true, sessions };
+}
