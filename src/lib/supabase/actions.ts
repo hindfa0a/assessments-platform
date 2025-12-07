@@ -209,26 +209,37 @@ export async function initiateAssessmentPayment(
         .from('assessment_sessions')
         .select('*, use_case')
         .eq('id', sessionId)
-        .eq('user_id', user.id) // Still enforce user ownership check manually
+        // .eq('user_id', user.id) // REMOVED: Fetch first, then validate ownership
         .single();
 
-    if (fetchError) {
+    if (fetchError && fetchError.code !== 'PGRST116') {
         console.error("Payment Action Fetch Error:", fetchError);
     }
 
     if (!session) {
-        // Debugging Info for Admin
-        const { data: debugSession } = await adminClient
-            .from('assessment_sessions')
-            .select('user_id')
-            .eq('id', sessionId)
-            .single();
+        return { success: false, error: "Session not found." };
+    }
 
-        console.error(`Payment Action Mismatch: Session ${sessionId} Owner: ${debugSession?.user_id} Current: ${user.id}`);
+    // OWNERSHIP CHECK & AUTO-CLAIM
+    if (session.user_id && session.user_id !== user.id) {
         return {
             success: false,
-            error: `Session not found. Mismatch: Auth(${user.id.slice(0, 5)}) vs Owner(${debugSession?.user_id?.slice(0, 5) || 'None'})`
+            error: `Session belongs to another user. (Auth: ${user.id.slice(0, 5)} vs Owner: ${session.user_id.slice(0, 5)})`
         };
+    }
+
+    if (!session.user_id) {
+        console.log(`Payment Action: Claiming orphaned session ${sessionId} for user ${user.id}`);
+        // Claim the session!
+        const { error: claimError } = await adminClient
+            .from('assessment_sessions')
+            .update({ user_id: user.id })
+            .eq('id', sessionId);
+
+        if (claimError) {
+            console.error("Payment Action: Failed to claim session", claimError);
+            return { success: false, error: "Failed to claim session ownership." };
+        }
     }
 
     if (session.payment_status === 'paid') {
