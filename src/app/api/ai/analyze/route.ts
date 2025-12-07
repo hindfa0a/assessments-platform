@@ -7,6 +7,7 @@ import { createClient } from '@/lib/supabase/server';
 export async function POST(req: NextRequest) {
     try {
         const { sessionId, lang } = await req.json();
+        console.log("AI Analysis Request - Session:", sessionId, "Lang:", lang);
 
         if (!sessionId) {
             return NextResponse.json({ error: 'Session ID required' }, { status: 400 });
@@ -68,11 +69,17 @@ export async function POST(req: NextRequest) {
         if (resultsContext.eq.scores) resultsText += `Emotional Intelligence: ${JSON.stringify(resultsContext.eq)}\n`;
         if (resultsContext.conflict.style) resultsText += `Conflict Style: ${JSON.stringify(resultsContext.conflict)}\n`;
 
-        const userMessage = `
+        const isAr = lang === 'ar';
+        const userMessage = isAr ? `
         نتائج العميل/الطالب:
         ${resultsText}
         
         يرجى تقديم التحليل والتوصيات بناءً على هذه النتائج.
+        ` : `
+        Client/Student Results:
+        ${resultsText}
+        
+        Please provide analysis and recommendations based on these results.
         `;
 
         // 4. Call OpenAI API (Streaming)
