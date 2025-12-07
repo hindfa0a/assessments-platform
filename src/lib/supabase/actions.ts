@@ -171,37 +171,32 @@ export async function saveAssessmentSession(
         session = data;
         sessionError = error;
     }
-            .select()
-        .single();
-    session = data;
-    sessionError = error;
-}
 
-if (sessionError || !session) {
-    console.error("Session save error (RLS?):", sessionError);
-    return { success: false, error: sessionError?.message || "Failed to save session" };
-}
+    if (sessionError || !session) {
+        console.error("Session save error (RLS?):", sessionError);
+        return { success: false, error: sessionError?.message || "Failed to save session" };
+    }
 
-// 3. Save Answers (Bulk Insert)
-const allAnswers = Object.values(answers).flat().map(ans => ({
-    session_id: session.id,
-    question_id: ans.questionId,
-    assessment_type: ans.questionId.split('_')[0], // hacky extraction or pass it in
-    answer_value: ans.value,
-    response_time_ms: ans.responseTimeMs
-}));
+    // 3. Save Answers (Bulk Insert)
+    const allAnswers = Object.values(answers).flat().map(ans => ({
+        session_id: session.id,
+        question_id: ans.questionId,
+        assessment_type: ans.questionId.split('_')[0], // hacky extraction or pass it in
+        answer_value: ans.value,
+        response_time_ms: ans.responseTimeMs
+    }));
 
-const { error: answersError } = await dbClient
-    .from('user_answers')
-    .insert(allAnswers);
+    const { error: answersError } = await dbClient
+        .from('user_answers')
+        .insert(allAnswers);
 
-if (answersError) {
-    console.error("Failed to save answers:", answersError);
-    // We might not want to fail the whole request if session is saved, but let's be strict for PoC
-    return { success: false, error: "Failed to save detailed answers" };
-}
+    if (answersError) {
+        console.error("Failed to save answers:", answersError);
+        // We might not want to fail the whole request if session is saved, but let's be strict for PoC
+        return { success: false, error: "Failed to save detailed answers" };
+    }
 
-return { success: true, sessionId: session.id };
+    return { success: true, sessionId: session.id };
 }
 
 // ... (existing code)
