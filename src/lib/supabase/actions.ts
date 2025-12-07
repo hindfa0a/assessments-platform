@@ -116,8 +116,14 @@ export async function saveAssessmentSession(
     }
 
     // ENSURE PROFILE EXISTS (Constraint Fix)
-    // If auth trigger failed or doesn't exist, this prevents FK violation
-    const { error: profileError } = await dbClient
+    // Use Admin Client to bypass RLS (User might not have permissions to UPSERT into users table)
+    const { createClient: createSupabaseClient } = await import('@supabase/supabase-js');
+    const adminClient = createSupabaseClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY!
+    );
+
+    const { error: profileError } = await adminClient
         .from('users')
         .upsert({
             id: user.id,
@@ -127,7 +133,6 @@ export async function saveAssessmentSession(
 
     if (profileError) {
         console.warn("Profile sync warning:", profileError);
-        // We continue, hoping it might exist? But likely it will fail next step if this failed.
     }
 
     let session;
