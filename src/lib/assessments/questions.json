@@ -1,0 +1,2423 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "total_questions": 268,
+    "assessments": 9,
+    "languages": [
+      "ar",
+      "en"
+    ],
+    "created_for": "Baseera - بصيرة",
+    "scoring": {
+      "scale": "5-point Likert",
+      "values": {
+        "strongly_agree": 2,
+        "agree": 1,
+        "neutral": 0,
+        "disagree": -1,
+        "strongly_disagree": -2
+      }
+    }
+  },
+  "assessments": {
+    "mbti": {
+      "name": {
+        "ar": "مؤشر مايرز-بريغز للأنماط",
+        "en": "Myers-Briggs Type Indicator"
+      },
+      "total_questions": 48,
+      "dimensions": {
+        "EI": {
+          "positive": "E",
+          "negative": "I",
+          "ar": "الانبساط / الانطواء",
+          "en": "Extraversion / Introversion"
+        },
+        "SN": {
+          "positive": "S",
+          "negative": "N",
+          "ar": "الحسي / الحدسي",
+          "en": "Sensing / Intuition"
+        },
+        "TF": {
+          "positive": "T",
+          "negative": "F",
+          "ar": "التفكير / الشعور",
+          "en": "Thinking / Feeling"
+        },
+        "JP": {
+          "positive": "J",
+          "negative": "P",
+          "ar": "الحكم / الإدراك",
+          "en": "Judging / Perceiving"
+        }
+      },
+      "questions": [
+        {
+          "id": "mbti_ei_01",
+          "dimension": "EI",
+          "text_ar": "أفضل الدراسة في مجموعات مع زملائي بدلاً من الدراسة بمفردي",
+          "text_en": "I prefer studying in groups with classmates rather than studying alone",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_ei_02",
+          "dimension": "EI",
+          "text_ar": "أشعر بالحيوية والنشاط بعد قضاء وقت مع مجموعة كبيرة من الناس",
+          "text_en": "I feel energized after spending time with a large group of people",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_ei_03",
+          "dimension": "EI",
+          "text_ar": "أحتاج لوقت بمفردي لإعادة شحن طاقتي بعد التفاعلات الاجتماعية",
+          "text_en": "I need alone time to recharge after social interactions",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_ei_04",
+          "dimension": "EI",
+          "text_ar": "أستمتع بالمشاركة في الأنشطة الجماعية والفعاليات الاجتماعية",
+          "text_en": "I enjoy participating in group activities and social events",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_ei_05",
+          "dimension": "EI",
+          "text_ar": "أفضل التفكير في أفكاري قبل مشاركتها مع الآخرين",
+          "text_en": "I prefer thinking through my ideas before sharing them with others",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_ei_06",
+          "dimension": "EI",
+          "text_ar": "أجد سهولة في بدء المحادثات مع أشخاص جدد",
+          "text_en": "I find it easy to start conversations with new people",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_ei_07",
+          "dimension": "EI",
+          "text_ar": "أفضل العمل في بيئة هادئة بعيداً عن الضوضاء والتشتيت",
+          "text_en": "I prefer working in a quiet environment away from noise and distractions",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_ei_08",
+          "dimension": "EI",
+          "text_ar": "أستمتع بأن أكون مركز الاهتمام في المناسبات الاجتماعية",
+          "text_en": "I enjoy being the center of attention at social gatherings",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_ei_09",
+          "dimension": "EI",
+          "text_ar": "أفضل التواصل الكتابي على المكالمات الهاتفية أو المقابلات الشخصية",
+          "text_en": "I prefer written communication over phone calls or in-person meetings",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_ei_10",
+          "dimension": "EI",
+          "text_ar": "أشعر بالراحة عند التحدث أمام مجموعات كبيرة",
+          "text_en": "I feel comfortable speaking in front of large groups",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_ei_11",
+          "dimension": "EI",
+          "text_ar": "أفضل قضاء عطلة نهاية الأسبوع في المنزل بدلاً من الخروج",
+          "text_en": "I prefer spending weekends at home rather than going out",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_ei_13",
+          "dimension": "EI",
+          "text_ar": "أفضل قضاء وقت طويل بمفردي للتفكير والتأمل",
+          "text_en": "I prefer spending extended time alone for thinking and reflection",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_sn_01",
+          "dimension": "SN",
+          "text_ar": "أفضل المواد الدراسية التي تركز على الحقائق والتطبيقات العملية",
+          "text_en": "I prefer subjects that focus on facts and practical applications",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_sn_02",
+          "dimension": "SN",
+          "text_ar": "أستمتع بالتفكير في الاحتمالات والنظريات المجردة",
+          "text_en": "I enjoy thinking about possibilities and abstract theories",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_sn_03",
+          "dimension": "SN",
+          "text_ar": "أهتم بالتفاصيل الدقيقة عند دراسة موضوع جديد",
+          "text_en": "I pay attention to precise details when studying a new topic",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_sn_04",
+          "dimension": "SN",
+          "text_ar": "أفضل رؤية الصورة الكبيرة قبل الخوض في التفاصيل",
+          "text_en": "I prefer seeing the big picture before diving into details",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_sn_05",
+          "dimension": "SN",
+          "text_ar": "أعتمد على خبراتي السابقة عند اتخاذ القرارات",
+          "text_en": "I rely on my past experiences when making decisions",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_sn_06",
+          "dimension": "SN",
+          "text_ar": "أستمتع بتخيل المستقبل والتفكير في ما قد يكون ممكناً",
+          "text_en": "I enjoy imagining the future and thinking about what could be possible",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_sn_07",
+          "dimension": "SN",
+          "text_ar": "أفضل التعليمات الواضحة والخطوات المحددة عند تعلم شيء جديد",
+          "text_en": "I prefer clear instructions and specific steps when learning something new",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_sn_08",
+          "dimension": "SN",
+          "text_ar": "أجد نفسي منجذباً للأفكار الإبداعية والحلول غير التقليدية",
+          "text_en": "I find myself drawn to creative ideas and unconventional solutions",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_sn_09",
+          "dimension": "SN",
+          "text_ar": "أفضل العمل مع الأشياء الملموسة التي يمكنني رؤيتها ولمسها",
+          "text_en": "I prefer working with tangible things I can see and touch",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_sn_10",
+          "dimension": "SN",
+          "text_ar": "أستمتع بالقراءة بين السطور وفهم المعاني الخفية",
+          "text_en": "I enjoy reading between the lines and understanding hidden meanings",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_sn_11",
+          "dimension": "SN",
+          "text_ar": "أثق في المعلومات التي يمكن إثباتها بالأدلة والحقائق",
+          "text_en": "I trust information that can be proven with evidence and facts",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_sn_12",
+          "dimension": "SN",
+          "text_ar": "أثق في حدسي حتى لو لم أستطع تفسير السبب",
+          "text_en": "I trust my intuition even when I can't explain why",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_tf_01",
+          "dimension": "TF",
+          "text_ar": "عند اختيار التخصص، أعتمد على التحليل المنطقي للفرص الوظيفية والراتب",
+          "text_en": "When choosing a major, I rely on logical analysis of job opportunities and salary",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_tf_02",
+          "dimension": "TF",
+          "text_ar": "أهتم بكيف ستؤثر قراراتي على مشاعر الآخرين",
+          "text_en": "I care about how my decisions will affect others' feelings",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_tf_03",
+          "dimension": "TF",
+          "text_ar": "أفضل الحكم على الأمور بموضوعية بناءً على المعايير المنطقية",
+          "text_en": "I prefer judging matters objectively based on logical criteria",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_tf_04",
+          "dimension": "TF",
+          "text_ar": "أسعى للحفاظ على الانسجام في علاقاتي حتى لو تطلب ذلك التنازل",
+          "text_en": "I strive to maintain harmony in my relationships even if it requires compromise",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_tf_05",
+          "dimension": "TF",
+          "text_ar": "أقدر الصدق والمباشرة حتى لو كانت الحقيقة مؤلمة",
+          "text_en": "I value honesty and directness even if the truth is painful",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_tf_06",
+          "dimension": "TF",
+          "text_ar": "أحاول فهم وجهات نظر الآخرين والتعاطف معهم",
+          "text_en": "I try to understand others' perspectives and empathize with them",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_tf_07",
+          "dimension": "TF",
+          "text_ar": "أتخذ قراراتي بناءً على الحقائق والمنطق بدلاً من المشاعر",
+          "text_en": "I make decisions based on facts and logic rather than feelings",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_tf_08",
+          "dimension": "TF",
+          "text_ar": "أجد صعوبة في انتقاد الآخرين حتى لو كان ذلك ضرورياً",
+          "text_en": "I find it difficult to criticize others even when necessary",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_tf_09",
+          "dimension": "TF",
+          "text_ar": "أفضل حل الخلافات بالنقاش المنطقي والحجج الموضوعية",
+          "text_en": "I prefer resolving conflicts through logical discussion and objective arguments",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_tf_10",
+          "dimension": "TF",
+          "text_ar": "أهتم بمشاعر الآخرين وأحاول عدم إيذائهم",
+          "text_en": "I care about others' feelings and try not to hurt them",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_tf_11",
+          "dimension": "TF",
+          "text_ar": "أقدر الكفاءة والإنتاجية في العمل",
+          "text_en": "I value efficiency and productivity at work",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_tf_12",
+          "dimension": "TF",
+          "text_ar": "أفضل بيئة عمل داعمة وودودة على بيئة تنافسية",
+          "text_en": "I prefer a supportive and friendly work environment over a competitive one",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_jp_01",
+          "dimension": "JP",
+          "text_ar": "أفضل وضع خطط محددة والالتزام بها",
+          "text_en": "I prefer making specific plans and sticking to them",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_jp_02",
+          "dimension": "JP",
+          "text_ar": "أستمتع بالمرونة والتكيف مع الظروف المتغيرة",
+          "text_en": "I enjoy flexibility and adapting to changing circumstances",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_jp_03",
+          "dimension": "JP",
+          "text_ar": "أشعر بالراحة عندما أنهي مهامي قبل الموعد النهائي",
+          "text_en": "I feel comfortable when I complete my tasks before the deadline",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_jp_04",
+          "dimension": "JP",
+          "text_ar": "أعمل بشكل أفضل تحت ضغط اللحظات الأخيرة",
+          "text_en": "I work better under last-minute pressure",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_jp_05",
+          "dimension": "JP",
+          "text_ar": "أفضل اتخاذ القرارات بسرعة والمضي قدماً",
+          "text_en": "I prefer making decisions quickly and moving forward",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_jp_06",
+          "dimension": "JP",
+          "text_ar": "أفضل إبقاء خياراتي مفتوحة لأطول وقت ممكن",
+          "text_en": "I prefer keeping my options open for as long as possible",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_jp_07",
+          "dimension": "JP",
+          "text_ar": "أحب أن يكون لدي جدول منظم ومحدد لأنشطتي اليومية",
+          "text_en": "I like having an organized and defined schedule for my daily activities",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_jp_08",
+          "dimension": "JP",
+          "text_ar": "أستمتع بالعفوية والتصرف حسب اللحظة",
+          "text_en": "I enjoy spontaneity and acting in the moment",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_jp_09",
+          "dimension": "JP",
+          "text_ar": "أشعر بالإحباط عندما تتغير الخطط في اللحظة الأخيرة",
+          "text_en": "I feel frustrated when plans change at the last minute",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_jp_10",
+          "dimension": "JP",
+          "text_ar": "أجد المفاجآت ممتعة ومثيرة",
+          "text_en": "I find surprises enjoyable and exciting",
+          "reverse_scored": true
+        },
+        {
+          "id": "mbti_jp_11",
+          "dimension": "JP",
+          "text_ar": "أفضل إنهاء مشروع واحد قبل البدء بآخر",
+          "text_en": "I prefer finishing one project before starting another",
+          "reverse_scored": false
+        },
+        {
+          "id": "mbti_jp_12",
+          "dimension": "JP",
+          "text_ar": "أستطيع العمل على عدة مهام في نفس الوقت بسهولة",
+          "text_en": "I can easily work on multiple tasks at the same time",
+          "reverse_scored": true
+        }
+      ]
+    },
+    "holland": {
+      "name": {
+        "ar": "رموز هولاند المهنية",
+        "en": "Holland Career Codes (RIASEC)"
+      },
+      "total_questions": 48,
+      "types": {
+        "R": {
+          "ar": "واقعي",
+          "en": "Realistic"
+        },
+        "I": {
+          "ar": "استقصائي",
+          "en": "Investigative"
+        },
+        "A": {
+          "ar": "فني",
+          "en": "Artistic"
+        },
+        "S": {
+          "ar": "اجتماعي",
+          "en": "Social"
+        },
+        "E": {
+          "ar": "ريادي",
+          "en": "Enterprising"
+        },
+        "C": {
+          "ar": "منظم",
+          "en": "Conventional"
+        }
+      },
+      "questions": [
+        {
+          "id": "holland_r_01",
+          "type": "R",
+          "text_ar": "أستمتع بإصلاح الأشياء وتفكيك الأجهزة لمعرفة كيف تعمل",
+          "text_en": "I enjoy fixing things and taking apart devices to see how they work",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_r_02",
+          "type": "R",
+          "text_ar": "أفضل العمل بيدي وصنع أشياء ملموسة",
+          "text_en": "I prefer working with my hands and making tangible things",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_r_03",
+          "type": "R",
+          "text_ar": "أستمتع بالأنشطة الخارجية والعمل في الطبيعة",
+          "text_en": "I enjoy outdoor activities and working in nature",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_r_04",
+          "type": "R",
+          "text_ar": "أحب استخدام الأدوات والمعدات الميكانيكية",
+          "text_en": "I like using tools and mechanical equipment",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_r_05",
+          "type": "R",
+          "text_ar": "أفضل الأعمال التي تتطلب جهداً بدنياً",
+          "text_en": "I prefer work that requires physical effort",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_r_06",
+          "type": "R",
+          "text_ar": "أستمتع ببناء الأشياء وتجميعها",
+          "text_en": "I enjoy building and assembling things",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_r_07",
+          "type": "R",
+          "text_ar": "أحب العمل مع الآلات والتقنيات الحديثة",
+          "text_en": "I like working with machines and modern technology",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_r_08",
+          "type": "R",
+          "text_ar": "أفضل حل المشكلات العملية بدلاً من النظرية",
+          "text_en": "I prefer solving practical problems rather than theoretical ones",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_i_01",
+          "type": "I",
+          "text_ar": "أحب إجراء التجارب العلمية واكتشاف كيفية عمل الأشياء",
+          "text_en": "I love conducting scientific experiments and discovering how things work",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_i_02",
+          "type": "I",
+          "text_ar": "أستمتع بالبحث والقراءة عن مواضيع علمية معقدة",
+          "text_en": "I enjoy researching and reading about complex scientific topics",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_i_03",
+          "type": "I",
+          "text_ar": "أحب تحليل البيانات والبحث عن الأنماط",
+          "text_en": "I like analyzing data and looking for patterns",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_i_04",
+          "type": "I",
+          "text_ar": "أستمتع بحل المسائل الرياضية والألغاز المنطقية",
+          "text_en": "I enjoy solving mathematical problems and logical puzzles",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_i_05",
+          "type": "I",
+          "text_ar": "أفضل فهم الأسباب العميقة وراء الظواهر",
+          "text_en": "I prefer understanding the deep causes behind phenomena",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_i_06",
+          "type": "I",
+          "text_ar": "أحب التفكير النقدي وطرح الأسئلة",
+          "text_en": "I like critical thinking and asking questions",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_i_07",
+          "type": "I",
+          "text_ar": "أستمتع بالعمل في المختبرات ومراكز البحث",
+          "text_en": "I enjoy working in laboratories and research centers",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_i_08",
+          "type": "I",
+          "text_ar": "أفضل الوظائف التي تتطلب التفكير العميق والتحليل",
+          "text_en": "I prefer jobs that require deep thinking and analysis",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_a_01",
+          "type": "A",
+          "text_ar": "أستمتع بالرسم أو التصميم أو كتابة القصص والقصائد",
+          "text_en": "I enjoy drawing, designing, or writing stories and poems",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_a_02",
+          "type": "A",
+          "text_ar": "أحب التعبير عن نفسي من خلال الفن أو الموسيقى",
+          "text_en": "I like expressing myself through art or music",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_a_03",
+          "type": "A",
+          "text_ar": "أستمتع بزيارة المتاحف والمعارض الفنية",
+          "text_en": "I enjoy visiting museums and art galleries",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_a_04",
+          "type": "A",
+          "text_ar": "أفضل الأعمال التي تتيح لي الإبداع والابتكار",
+          "text_en": "I prefer work that allows me to be creative and innovative",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_a_05",
+          "type": "A",
+          "text_ar": "أحب التصوير الفوتوغرافي وتسجيل الفيديو",
+          "text_en": "I like photography and video recording",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_a_06",
+          "type": "A",
+          "text_ar": "أستمتع بتصميم الأزياء أو الديكور الداخلي",
+          "text_en": "I enjoy fashion design or interior decoration",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_a_07",
+          "type": "A",
+          "text_ar": "أحب التمثيل أو الأداء أمام الجمهور",
+          "text_en": "I like acting or performing in front of an audience",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_a_08",
+          "type": "A",
+          "text_ar": "أفضل بيئة عمل حرة دون قيود صارمة",
+          "text_en": "I prefer a free work environment without strict constraints",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_s_01",
+          "type": "S",
+          "text_ar": "أستمتع بمساعدة الآخرين وتقديم الدعم لهم",
+          "text_en": "I enjoy helping others and providing support to them",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_s_02",
+          "type": "S",
+          "text_ar": "أحب التدريس وشرح الأفكار للآخرين",
+          "text_en": "I like teaching and explaining ideas to others",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_s_03",
+          "type": "S",
+          "text_ar": "أستمتع بالعمل التطوعي وخدمة المجتمع",
+          "text_en": "I enjoy volunteer work and community service",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_s_04",
+          "type": "S",
+          "text_ar": "أفضل الوظائف التي تتضمن التفاعل المباشر مع الناس",
+          "text_en": "I prefer jobs that involve direct interaction with people",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_s_05",
+          "type": "S",
+          "text_ar": "أحب الاستماع لمشاكل الآخرين ومحاولة مساعدتهم",
+          "text_en": "I like listening to others' problems and trying to help them",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_s_06",
+          "type": "S",
+          "text_ar": "أستمتع بتنظيم الفعاليات والأنشطة الاجتماعية",
+          "text_en": "I enjoy organizing events and social activities",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_s_07",
+          "type": "S",
+          "text_ar": "أفضل العمل ضمن فريق بدلاً من العمل بمفردي",
+          "text_en": "I prefer working in a team rather than working alone",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_s_08",
+          "type": "S",
+          "text_ar": "أحب رعاية الآخرين والاهتمام بصحتهم ورفاهيتهم",
+          "text_en": "I like caring for others and looking after their health and wellbeing",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_e_01",
+          "type": "E",
+          "text_ar": "أستمتع بقيادة المشاريع واتخاذ القرارات",
+          "text_en": "I enjoy leading projects and making decisions",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_e_02",
+          "type": "E",
+          "text_ar": "أحب إقناع الآخرين بأفكاري ووجهات نظري",
+          "text_en": "I like persuading others with my ideas and viewpoints",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_e_03",
+          "type": "E",
+          "text_ar": "أستمتع بالتفاوض وعقد الصفقات",
+          "text_en": "I enjoy negotiating and making deals",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_e_04",
+          "type": "E",
+          "text_ar": "أفضل الوظائف التي توفر فرصاً للترقي والنمو",
+          "text_en": "I prefer jobs that offer opportunities for advancement and growth",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_e_05",
+          "type": "E",
+          "text_ar": "أحب المخاطرة المحسوبة لتحقيق أهدافي",
+          "text_en": "I like taking calculated risks to achieve my goals",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_e_06",
+          "type": "E",
+          "text_ar": "أستمتع ببدء مشاريع جديدة وريادة الأعمال",
+          "text_en": "I enjoy starting new projects and entrepreneurship",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_e_07",
+          "type": "E",
+          "text_ar": "أحب التنافس والسعي للفوز",
+          "text_en": "I like competing and striving to win",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_e_08",
+          "type": "E",
+          "text_ar": "أفضل بيئة عمل ديناميكية وسريعة الإيقاع",
+          "text_en": "I prefer a dynamic and fast-paced work environment",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_c_01",
+          "type": "C",
+          "text_ar": "أستمتع بتنظيم الملفات والبيانات بشكل منهجي",
+          "text_en": "I enjoy organizing files and data systematically",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_c_02",
+          "type": "C",
+          "text_ar": "أحب العمل مع الأرقام والجداول والتقارير",
+          "text_en": "I like working with numbers, spreadsheets, and reports",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_c_03",
+          "type": "C",
+          "text_ar": "أفضل اتباع الإجراءات والقواعد المحددة",
+          "text_en": "I prefer following defined procedures and rules",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_c_04",
+          "type": "C",
+          "text_ar": "أستمتع بالمهام الروتينية التي تتطلب الدقة",
+          "text_en": "I enjoy routine tasks that require precision",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_c_05",
+          "type": "C",
+          "text_ar": "أحب العمل في بيئة منظمة ومرتبة",
+          "text_en": "I like working in an organized and orderly environment",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_c_06",
+          "type": "C",
+          "text_ar": "أفضل الوظائف التي توفر الاستقرار والأمان",
+          "text_en": "I prefer jobs that provide stability and security",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_c_07",
+          "type": "C",
+          "text_ar": "أستمتع بإدارة السجلات والوثائق",
+          "text_en": "I enjoy managing records and documents",
+          "reverse_scored": false
+        },
+        {
+          "id": "holland_c_08",
+          "type": "C",
+          "text_ar": "أحب التعامل مع التفاصيل الدقيقة والمهام المحددة",
+          "text_en": "I like dealing with precise details and specific tasks",
+          "reverse_scored": false
+        }
+      ]
+    },
+    "big_five": {
+      "name": {
+        "ar": "نموذج العوامل الخمسة الكبرى",
+        "en": "Big Five Personality Traits (OCEAN)"
+      },
+      "total_questions": 50,
+      "traits": {
+        "O": {
+          "ar": "الانفتاح على الخبرات",
+          "en": "Openness to Experience"
+        },
+        "C": {
+          "ar": "يقظة الضمير",
+          "en": "Conscientiousness"
+        },
+        "E": {
+          "ar": "الانبساط",
+          "en": "Extraversion"
+        },
+        "A": {
+          "ar": "المقبولية",
+          "en": "Agreeableness"
+        },
+        "N": {
+          "ar": "العصابية",
+          "en": "Neuroticism"
+        }
+      },
+      "questions": [
+        {
+          "id": "bigfive_o_01",
+          "trait": "O",
+          "text_ar": "أستمتع بتجربة أشياء جديدة ومختلفة",
+          "text_en": "I enjoy trying new and different things",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_o_02",
+          "trait": "O",
+          "text_ar": "لدي خيال واسع وأحلام يقظة متكررة",
+          "text_en": "I have a vivid imagination and frequent daydreams",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_o_03",
+          "trait": "O",
+          "text_ar": "أفضل الروتين والطرق المألوفة في حياتي",
+          "text_en": "I prefer routine and familiar ways in my life",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_o_04",
+          "trait": "O",
+          "text_ar": "أهتم بالفن والجمال والتعبير الإبداعي",
+          "text_en": "I am interested in art, beauty, and creative expression",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_o_05",
+          "trait": "O",
+          "text_ar": "أفضل الأفكار العملية على النظريات المجردة",
+          "text_en": "I prefer practical ideas over abstract theories",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_o_06",
+          "trait": "O",
+          "text_ar": "أستمتع بالتفكير في المفاهيم الفلسفية العميقة",
+          "text_en": "I enjoy thinking about deep philosophical concepts",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_o_07",
+          "trait": "O",
+          "text_ar": "أجد صعوبة في تقبل الأفكار غير التقليدية",
+          "text_en": "I find it difficult to accept unconventional ideas",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_o_08",
+          "trait": "O",
+          "text_ar": "أحب استكشاف ثقافات وأفكار مختلفة",
+          "text_en": "I love exploring different cultures and ideas",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_o_09",
+          "trait": "O",
+          "text_ar": "أفضل القراءة عن المواضيع المألوفة فقط",
+          "text_en": "I prefer reading only about familiar topics",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_o_10",
+          "trait": "O",
+          "text_ar": "أجد الفنون والموسيقى مملة أحياناً",
+          "text_en": "I sometimes find arts and music boring",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_c_01",
+          "trait": "C",
+          "text_ar": "غالباً ما تكون حياتي غير منظمة",
+          "text_en": "My life is often disorganized",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_c_02",
+          "trait": "C",
+          "text_ar": "أكمل مهامي دائماً في الوقت المحدد",
+          "text_en": "I always complete my tasks on time",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_c_03",
+          "trait": "C",
+          "text_ar": "أميل إلى تأجيل الأعمال الصعبة",
+          "text_en": "I tend to postpone difficult tasks",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_c_04",
+          "trait": "C",
+          "text_ar": "أضع أهدافاً واضحة وأعمل على تحقيقها",
+          "text_en": "I set clear goals and work towards achieving them",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_c_05",
+          "trait": "C",
+          "text_ar": "أهتم بالتفاصيل الدقيقة في عملي",
+          "text_en": "I pay attention to fine details in my work",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_c_06",
+          "trait": "C",
+          "text_ar": "أجد صعوبة في الحفاظ على الترتيب والنظام",
+          "text_en": "I find it difficult to maintain order and organization",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_c_07",
+          "trait": "C",
+          "text_ar": "أتحمل مسؤولية أفعالي وقراراتي",
+          "text_en": "I take responsibility for my actions and decisions",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_c_08",
+          "trait": "C",
+          "text_ar": "أبذل الحد الأدنى من الجهد المطلوب",
+          "text_en": "I put in the minimum effort required",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_c_09",
+          "trait": "C",
+          "text_ar": "أتجاهل أحياناً واجباتي ومسؤولياتي",
+          "text_en": "I sometimes neglect my duties and responsibilities",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_c_10",
+          "trait": "C",
+          "text_ar": "أفكر ملياً قبل اتخاذ القرارات المهمة",
+          "text_en": "I think carefully before making important decisions",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_e_01",
+          "trait": "E",
+          "text_ar": "أشعر بالراحة في المناسبات الاجتماعية الكبيرة",
+          "text_en": "I feel comfortable at large social gatherings",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_e_02",
+          "trait": "E",
+          "text_ar": "أستمتع بالتحدث مع أشخاص جدد",
+          "text_en": "I enjoy talking to new people",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_e_03",
+          "trait": "E",
+          "text_ar": "أفضل قضاء الوقت بمفردي على التجمعات الاجتماعية",
+          "text_en": "I prefer spending time alone over social gatherings",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_e_04",
+          "trait": "E",
+          "text_ar": "أشعر بالحيوية والنشاط في معظم الأوقات",
+          "text_en": "I feel energetic and active most of the time",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_e_05",
+          "trait": "E",
+          "text_ar": "أجد صعوبة في بدء المحادثات مع الغرباء",
+          "text_en": "I find it difficult to start conversations with strangers",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_e_06",
+          "trait": "E",
+          "text_ar": "أحب أن أكون محاطاً بالناس",
+          "text_en": "I like to be surrounded by people",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_e_07",
+          "trait": "E",
+          "text_ar": "أشعر بالخجل في المواقف الاجتماعية الجديدة",
+          "text_en": "I feel shy in new social situations",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_e_08",
+          "trait": "E",
+          "text_ar": "أستمتع بكوني مركز الاهتمام",
+          "text_en": "I enjoy being the center of attention",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_e_09",
+          "trait": "E",
+          "text_ar": "أفضل الأنشطة الهادئة على الصاخبة",
+          "text_en": "I prefer quiet activities over loud ones",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_e_10",
+          "trait": "E",
+          "text_ar": "أنتظر الآخرين ليبادروا بالحديث معي",
+          "text_en": "I wait for others to initiate conversation with me",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_a_01",
+          "trait": "A",
+          "text_ar": "أهتم بمشاعر الآخرين واحتياجاتهم",
+          "text_en": "I care about others' feelings and needs",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_a_02",
+          "trait": "A",
+          "text_ar": "أسعى لمساعدة الآخرين حتى لو لم يطلبوا",
+          "text_en": "I seek to help others even if they don't ask",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_a_03",
+          "trait": "A",
+          "text_ar": "أجد صعوبة في التعاطف مع مشاكل الآخرين",
+          "text_en": "I find it difficult to empathize with others' problems",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_a_04",
+          "trait": "A",
+          "text_ar": "أتجنب الخلافات وأسعى للتوافق",
+          "text_en": "I avoid conflicts and seek harmony",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_a_05",
+          "trait": "A",
+          "text_ar": "أميل لانتقاد الآخرين بشكل مباشر",
+          "text_en": "I tend to criticize others directly",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_a_06",
+          "trait": "A",
+          "text_ar": "أشكك في نوايا الآخرين",
+          "text_en": "I am suspicious of others' intentions",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_a_07",
+          "trait": "A",
+          "text_ar": "أفضل التنافس على التعاون",
+          "text_en": "I prefer competition over cooperation",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_a_08",
+          "trait": "A",
+          "text_ar": "أتعامل بلطف ولباقة مع الجميع",
+          "text_en": "I treat everyone with kindness and courtesy",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_a_09",
+          "trait": "A",
+          "text_ar": "أجد صعوبة في الصفح عن من أخطأ بحقي",
+          "text_en": "I find it difficult to forgive those who wronged me",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_a_10",
+          "trait": "A",
+          "text_ar": "أستمتع بالعمل الجماعي والتعاون",
+          "text_en": "I enjoy teamwork and cooperation",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_n_01",
+          "trait": "N",
+          "text_ar": "أشعر بالقلق والتوتر بسهولة",
+          "text_en": "I feel anxious and stressed easily",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_n_02",
+          "trait": "N",
+          "text_ar": "أبقى هادئاً في المواقف الضاغطة",
+          "text_en": "I stay calm in stressful situations",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_n_03",
+          "trait": "N",
+          "text_ar": "تتقلب مشاعري بشكل متكرر",
+          "text_en": "My mood fluctuates frequently",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_n_04",
+          "trait": "N",
+          "text_ar": "أشعر بالاستقرار العاطفي في معظم الأوقات",
+          "text_en": "I feel emotionally stable most of the time",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_n_05",
+          "trait": "N",
+          "text_ar": "أميل للتفكير السلبي والقلق بشأن المستقبل",
+          "text_en": "I tend to think negatively and worry about the future",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_n_06",
+          "trait": "N",
+          "text_ar": "أتعافى بسرعة من التجارب المحبطة",
+          "text_en": "I recover quickly from frustrating experiences",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_n_07",
+          "trait": "N",
+          "text_ar": "أشعر بالحزن أو الاكتئاب أحياناً دون سبب واضح",
+          "text_en": "I sometimes feel sad or depressed for no clear reason",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_n_08",
+          "trait": "N",
+          "text_ar": "أتعامل مع الضغوط بثقة وهدوء",
+          "text_en": "I handle pressure with confidence and calm",
+          "reverse_scored": true
+        },
+        {
+          "id": "bigfive_n_09",
+          "trait": "N",
+          "text_ar": "أغضب أو أنزعج بسرعة",
+          "text_en": "I get angry or upset quickly",
+          "reverse_scored": false
+        },
+        {
+          "id": "bigfive_n_10",
+          "trait": "N",
+          "text_ar": "نادراً ما أشعر بالإحباط أو الضيق",
+          "text_en": "I rarely feel frustrated or distressed",
+          "reverse_scored": true
+        }
+      ]
+    },
+    "work_values": {
+      "name": {
+        "ar": "تقييم القيم المهنية",
+        "en": "Work Values Assessment"
+      },
+      "total_questions": 20,
+      "values": {
+        "ACHIEVEMENT": {
+          "ar": "الإنجاز والتميز",
+          "en": "Achievement & Excellence",
+          "question_count": 4
+        },
+        "INDEPENDENCE": {
+          "ar": "الاستقلالية",
+          "en": "Independence",
+          "question_count": 3
+        },
+        "RECOGNITION": {
+          "ar": "التقدير والمكانة",
+          "en": "Recognition & Status",
+          "question_count": 3
+        },
+        "RELATIONSHIPS": {
+          "ar": "العلاقات الاجتماعية",
+          "en": "Relationships",
+          "question_count": 3
+        },
+        "SUPPORT": {
+          "ar": "الدعم والتطوير",
+          "en": "Support & Development",
+          "question_count": 3
+        },
+        "WORKING_CONDITIONS": {
+          "ar": "ظروف العمل",
+          "en": "Working Conditions",
+          "question_count": 4
+        }
+      },
+      "questions": [
+        {
+          "id": "wv_ach_01",
+          "value": "ACHIEVEMENT",
+          "text_ar": "أشعر بالرضا عندما أحقق نتائج متميزة في عملي",
+          "text_en": "I feel satisfied when I achieve outstanding results in my work",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_ach_03",
+          "value": "ACHIEVEMENT",
+          "text_ar": "أسعى دائماً لتحسين أدائي وتطوير مهاراتي",
+          "text_en": "I always strive to improve my performance and develop my skills",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_ach_04",
+          "value": "ACHIEVEMENT",
+          "text_ar": "أحب أن أتولى مهام صعبة تختبر قدراتي",
+          "text_en": "I like taking on challenging tasks that test my abilities",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_ind_01",
+          "value": "INDEPENDENCE",
+          "text_ar": "أفضل اتخاذ قراراتي بنفسي دون تدخل الآخرين",
+          "text_en": "I prefer making my own decisions without others' interference",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_ind_02",
+          "value": "INDEPENDENCE",
+          "text_ar": "أقدر الحرية في اختيار طريقة إنجاز عملي",
+          "text_en": "I value the freedom to choose how I complete my work",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_ind_03",
+          "value": "INDEPENDENCE",
+          "text_ar": "أفضل العمل بمفردي على العمل ضمن فريق",
+          "text_en": "I prefer working alone over working in a team",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_rec_01",
+          "value": "RECOGNITION",
+          "text_ar": "من المهم لي أن يعترف الآخرون بجهودي وإنجازاتي",
+          "text_en": "It's important for me that others recognize my efforts and achievements",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_rec_02",
+          "value": "RECOGNITION",
+          "text_ar": "أسعى للحصول على مكانة مرموقة في مجال عملي",
+          "text_en": "I strive to gain a prestigious position in my field",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_rec_03",
+          "value": "RECOGNITION",
+          "text_ar": "التقدير والثناء من رؤسائي يحفزني كثيراً",
+          "text_en": "Appreciation and praise from my superiors motivates me greatly",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_rel_01",
+          "value": "RELATIONSHIPS",
+          "text_ar": "أقدر العلاقات الودية مع زملائي في العمل",
+          "text_en": "I value friendly relationships with my coworkers",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_rel_02",
+          "value": "RELATIONSHIPS",
+          "text_ar": "أفضل بيئة عمل تعاونية على بيئة تنافسية",
+          "text_en": "I prefer a collaborative work environment over a competitive one",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_rel_03",
+          "value": "RELATIONSHIPS",
+          "text_ar": "العلاقات الإنسانية في العمل أهم من الراتب",
+          "text_en": "Human relationships at work are more important than salary",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_sup_01",
+          "value": "SUPPORT",
+          "text_ar": "أحتاج لإدارة داعمة تساعدني على النمو المهني",
+          "text_en": "I need supportive management that helps me grow professionally",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_sup_02",
+          "value": "SUPPORT",
+          "text_ar": "فرص التدريب والتطوير مهمة جداً لي",
+          "text_en": "Training and development opportunities are very important to me",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_sup_03",
+          "value": "SUPPORT",
+          "text_ar": "أقدر التغذية الراجعة البناءة من مديري",
+          "text_en": "I value constructive feedback from my manager",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_wc_01",
+          "value": "WORKING_CONDITIONS",
+          "text_ar": "الأمان الوظيفي أولوية قصوى بالنسبة لي",
+          "text_en": "Job security is a top priority for me",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_wc_02",
+          "value": "WORKING_CONDITIONS",
+          "text_ar": "أهتم كثيراً بالراتب والمزايا المادية",
+          "text_en": "I care a lot about salary and financial benefits",
+          "reverse_scored": false
+        },
+        {
+          "id": "wv_wc_04",
+          "value": "WORKING_CONDITIONS",
+          "text_ar": "أفضل بيئة عمل مريحة ومجهزة جيداً",
+          "text_en": "I prefer a comfortable and well-equipped work environment",
+          "reverse_scored": false
+        }
+      ]
+    },
+    "attachment_style": {
+      "name": {
+        "ar": "نمط التعلق في العلاقات",
+        "en": "Attachment Style in Relationships"
+      },
+      "total_questions": 20,
+      "styles": {
+        "secure": {
+          "ar": "آمن",
+          "en": "Secure"
+        },
+        "anxious": {
+          "ar": "متعلق",
+          "en": "Anxious"
+        },
+        "avoidant": {
+          "ar": "مستقل",
+          "en": "Avoidant"
+        },
+        "fearful": {
+          "ar": "حذر",
+          "en": "Fearful-Avoidant"
+        }
+      },
+      "questions": [
+        {
+          "id": "attach_sec_01",
+          "style": "secure",
+          "text_ar": "أشعر بالراحة عند مشاركة مشاعري العميقة مع شريك حياتي",
+          "text_en": "I feel comfortable sharing my deep feelings with my partner",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_sec_02",
+          "style": "secure",
+          "text_ar": "أثق بشريك حياتي وأعتمد عليه",
+          "text_en": "I trust my partner and rely on them",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_sec_03",
+          "style": "secure",
+          "text_ar": "أشعر بالأمان في علاقتي العاطفية",
+          "text_en": "I feel secure in my romantic relationship",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_sec_04",
+          "style": "secure",
+          "text_ar": "أستطيع أن أكون مستقلاً وقريباً في نفس الوقت",
+          "text_en": "I can be both independent and close at the same time",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_sec_05",
+          "style": "secure",
+          "text_ar": "أتعامل مع الخلافات بهدوء وأسعى للحلول",
+          "text_en": "I handle conflicts calmly and seek solutions",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_anx_01",
+          "style": "anxious",
+          "text_ar": "أقلق كثيراً بشأن ما إذا كان شريكي يحبني حقاً",
+          "text_en": "I worry a lot about whether my partner truly loves me",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_anx_02",
+          "style": "anxious",
+          "text_ar": "أحتاج لتطمينات متكررة من شريك حياتي",
+          "text_en": "I need frequent reassurance from my partner",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_anx_03",
+          "style": "anxious",
+          "text_ar": "أخاف من أن يتركني شريكي",
+          "text_en": "I'm afraid my partner will leave me",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_anx_04",
+          "style": "anxious",
+          "text_ar": "أشعر بالغيرة بسهولة في علاقتي",
+          "text_en": "I feel jealous easily in my relationship",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_anx_05",
+          "style": "anxious",
+          "text_ar": "أريد أن أكون قريباً جداً من شريكي طوال الوقت",
+          "text_en": "I want to be very close to my partner all the time",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_avo_01",
+          "style": "avoidant",
+          "text_ar": "أفضل الحفاظ على مسافة عاطفية في علاقاتي",
+          "text_en": "I prefer maintaining emotional distance in my relationships",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_avo_02",
+          "style": "avoidant",
+          "text_ar": "أجد صعوبة في الاعتماد على الآخرين",
+          "text_en": "I find it difficult to depend on others",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_avo_03",
+          "style": "avoidant",
+          "text_ar": "أشعر بعدم الارتياح عندما يصبح شريكي قريباً جداً",
+          "text_en": "I feel uncomfortable when my partner gets too close",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_avo_04",
+          "style": "avoidant",
+          "text_ar": "أقدر استقلاليتي أكثر من القرب العاطفي",
+          "text_en": "I value my independence more than emotional closeness",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_avo_05",
+          "style": "avoidant",
+          "text_ar": "أجد صعوبة في التعبير عن مشاعري لشريكي",
+          "text_en": "I find it difficult to express my feelings to my partner",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_fear_01",
+          "style": "fearful",
+          "text_ar": "أريد القرب لكنني أخاف منه في نفس الوقت",
+          "text_en": "I want closeness but I'm also afraid of it",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_fear_02",
+          "style": "fearful",
+          "text_ar": "أجد صعوبة في الثقة بالآخرين رغم رغبتي في ذلك",
+          "text_en": "I find it hard to trust others despite wanting to",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_fear_03",
+          "style": "fearful",
+          "text_ar": "أتأرجح بين الرغبة في القرب والابتعاد",
+          "text_en": "I oscillate between wanting closeness and distance",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_fear_04",
+          "style": "fearful",
+          "text_ar": "أخاف من الرفض وأتجنب الارتباط العميق",
+          "text_en": "I fear rejection and avoid deep commitment",
+          "reverse_scored": false
+        },
+        {
+          "id": "attach_fear_05",
+          "style": "fearful",
+          "text_ar": "أشعر بالتناقض في علاقاتي العاطفية",
+          "text_en": "I feel conflicted in my romantic relationships",
+          "reverse_scored": false
+        }
+      ]
+    },
+    "love_languages": {
+      "name": {
+        "ar": "لغات الحب الخمس",
+        "en": "The Five Love Languages"
+      },
+      "total_questions": 30,
+      "languages": {
+        "WORDS": {
+          "ar": "كلمات التأكيد",
+          "en": "Words of Affirmation"
+        },
+        "QUALITY_TIME": {
+          "ar": "الوقت النوعي",
+          "en": "Quality Time"
+        },
+        "GIFTS": {
+          "ar": "تلقي الهدايا",
+          "en": "Receiving Gifts"
+        },
+        "ACTS": {
+          "ar": "أفعال الخدمة",
+          "en": "Acts of Service"
+        },
+        "TOUCH": {
+          "ar": "اللمس الجسدي",
+          "en": "Physical Touch"
+        }
+      },
+      "questions": [
+        {
+          "id": "love_words_01",
+          "language": "WORDS",
+          "text_ar": "أقدّر كثيراً عندما يعبر شريكي عن حبه بالكلمات",
+          "text_en": "I highly value when my partner expresses love through words",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_words_02",
+          "language": "WORDS",
+          "text_ar": "المجاملات والثناء تشعرني بالسعادة",
+          "text_en": "Compliments and praise make me feel happy",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_words_03",
+          "language": "WORDS",
+          "text_ar": "أحب سماع عبارات الحب والتقدير",
+          "text_en": "I love hearing expressions of love and appreciation",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_words_04",
+          "language": "WORDS",
+          "text_ar": "الكلمات المشجعة تعني لي الكثير",
+          "text_en": "Encouraging words mean a lot to me",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_words_05",
+          "language": "WORDS",
+          "text_ar": "أشعر بالحب عندما يخبرني شريكي بما يعجبه فيّ",
+          "text_en": "I feel loved when my partner tells me what they like about me",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_words_06",
+          "language": "WORDS",
+          "text_ar": "رسائل الحب والنصوص الجميلة تسعدني",
+          "text_en": "Love letters and sweet texts make me happy",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_qt_01",
+          "language": "TIME",
+          "text_ar": "أشعر بالحب عندما يعطيني شريكي اهتمامه الكامل",
+          "text_en": "I feel loved when my partner gives me their full attention",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_qt_02",
+          "language": "TIME",
+          "text_ar": "قضاء وقت مميز معاً أهم من أي هدية",
+          "text_en": "Spending quality time together is more important than any gift",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_qt_03",
+          "language": "TIME",
+          "text_ar": "أحب الأنشطة المشتركة مع شريكي",
+          "text_en": "I love shared activities with my partner",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_qt_04",
+          "language": "TIME",
+          "text_ar": "أشعر بالإهمال عندما لا نقضي وقتاً كافياً معاً",
+          "text_en": "I feel neglected when we don't spend enough time together",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_qt_05",
+          "language": "TIME",
+          "text_ar": "الحوار العميق مع شريكي يقربني منه",
+          "text_en": "Deep conversations with my partner bring us closer",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_qt_06",
+          "language": "TIME",
+          "text_ar": "أفضل قضاء الوقت مع شريكي على أي شيء آخر",
+          "text_en": "I prefer spending time with my partner over anything else",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_gifts_01",
+          "language": "GIFTS",
+          "text_ar": "الهدايا المدروسة تعني لي الكثير حتى لو كانت بسيطة",
+          "text_en": "Thoughtful gifts mean a lot to me even if they're simple",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_gifts_02",
+          "language": "GIFTS",
+          "text_ar": "أقدر عندما يفاجئني شريكي بهدية",
+          "text_en": "I appreciate when my partner surprises me with a gift",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_gifts_03",
+          "language": "GIFTS",
+          "text_ar": "الهدية تدل على أن شريكي يفكر فيّ",
+          "text_en": "A gift shows that my partner thinks of me",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_gifts_04",
+          "language": "GIFTS",
+          "text_ar": "أحتفظ بالهدايا التي تلقيتها من شريكي",
+          "text_en": "I keep the gifts I received from my partner",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_gifts_05",
+          "language": "GIFTS",
+          "text_ar": "أشعر بخيبة أمل عندما ينسى شريكي المناسبات المهمة",
+          "text_en": "I feel disappointed when my partner forgets important occasions",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_gifts_06",
+          "language": "GIFTS",
+          "text_ar": "الهدايا الرمزية تعني لي أكثر من قيمتها المادية",
+          "text_en": "Symbolic gifts mean more to me than their monetary value",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_acts_01",
+          "language": "ACTS",
+          "text_ar": "أشعر بالحب عندما يساعدني شريكي في الأعمال المنزلية",
+          "text_en": "I feel loved when my partner helps me with household chores",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_acts_02",
+          "language": "ACTS",
+          "text_ar": "الأفعال أهم من الكلمات بالنسبة لي",
+          "text_en": "Actions are more important than words to me",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_acts_03",
+          "language": "ACTS",
+          "text_ar": "أقدر عندما يقوم شريكي بشيء يخفف عني",
+          "text_en": "I appreciate when my partner does something to ease my burden",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_acts_04",
+          "language": "ACTS",
+          "text_ar": "أشعر بالحب عندما يهتم شريكي بالتفاصيل الصغيرة",
+          "text_en": "I feel loved when my partner pays attention to small details",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_acts_05",
+          "language": "ACTS",
+          "text_ar": "المساعدة العملية تعبر عن الحب أكثر من الهدايا",
+          "text_en": "Practical help expresses love more than gifts",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_acts_06",
+          "language": "ACTS",
+          "text_ar": "أقدر الجهد الذي يبذله شريكي لجعل حياتي أسهل",
+          "text_en": "I appreciate the effort my partner makes to make my life easier",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_touch_01",
+          "language": "TOUCH",
+          "text_ar": "اللمس الجسدي يشعرني بالقرب والأمان",
+          "text_en": "Physical touch makes me feel close and secure",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_touch_02",
+          "language": "TOUCH",
+          "text_ar": "أحب أن يمسك شريكي بيدي عندما نكون معاً",
+          "text_en": "I like my partner to hold my hand when we're together",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_touch_03",
+          "language": "TOUCH",
+          "text_ar": "الاحتضان يجعلني أشعر بالحب والراحة",
+          "text_en": "Hugs make me feel loved and comfortable",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_touch_04",
+          "language": "TOUCH",
+          "text_ar": "أشعر بالبعد عندما لا يكون هناك تواصل جسدي",
+          "text_en": "I feel distant when there's no physical contact",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_touch_05",
+          "language": "TOUCH",
+          "text_ar": "اللمسات الصغيرة خلال اليوم تعني لي الكثير",
+          "text_en": "Small touches throughout the day mean a lot to me",
+          "reverse_scored": false
+        },
+        {
+          "id": "love_touch_06",
+          "language": "TOUCH",
+          "text_ar": "أشعر بالحب عندما يحتضنني شريكي دون سبب",
+          "text_en": "I feel loved when my partner hugs me for no reason",
+          "reverse_scored": false
+        }
+      ]
+    },
+    "strengths": {
+      "name": {
+        "ar": "تقييم نقاط القوة الطبيعية",
+        "en": "Natural Strengths Assessment"
+      },
+      "total_questions": 30,
+      "domains": {
+        "executing": {
+          "ar": "التنفيذ",
+          "en": "Executing"
+        },
+        "influencing": {
+          "ar": "التأثير",
+          "en": "Influencing"
+        },
+        "relationship_building": {
+          "ar": "بناء العلاقات",
+          "en": "Relationship Building"
+        },
+        "strategic_thinking": {
+          "ar": "التفكير الاستراتيجي",
+          "en": "Strategic Thinking"
+        }
+      },
+      "strengths": {
+        "ACHIEVER": {
+          "ar": "المنجز",
+          "en": "Achiever",
+          "domain": "executing"
+        },
+        "DISCIPLINE": {
+          "ar": "المنضبط",
+          "en": "Discipline",
+          "domain": "executing"
+        },
+        "FOCUS": {
+          "ar": "المركّز",
+          "en": "Focus",
+          "domain": "executing"
+        },
+        "RESPONSIBILITY": {
+          "ar": "المسؤول",
+          "en": "Responsibility",
+          "domain": "executing"
+        },
+        "COMMUNICATION": {
+          "ar": "المتواصل",
+          "en": "Communication",
+          "domain": "influencing"
+        },
+        "COMMAND": {
+          "ar": "القائد",
+          "en": "Command",
+          "domain": "influencing"
+        },
+        "EMPATHY": {
+          "ar": "المتعاطف",
+          "en": "Empathy",
+          "domain": "relationship_building"
+        },
+        "HARMONY": {
+          "ar": "المنسجم",
+          "en": "Harmony",
+          "domain": "relationship_building"
+        },
+        "ANALYTICAL": {
+          "ar": "المحلل",
+          "en": "Analytical",
+          "domain": "strategic_thinking"
+        },
+        "STRATEGIC": {
+          "ar": "الاستراتيجي",
+          "en": "Strategic",
+          "domain": "strategic_thinking"
+        }
+      },
+      "questions": [
+        {
+          "id": "str_ach_01",
+          "strength": "ACHIEVER",
+          "text_ar": "أشعر بعدم الرضا إذا لم أنجز شيئاً ملموساً كل يوم",
+          "text_en": "I feel dissatisfied if I don't accomplish something tangible each day",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_ach_02",
+          "strength": "ACHIEVER",
+          "text_ar": "لدي طاقة داخلية تدفعني للإنجاز باستمرار",
+          "text_en": "I have an internal drive that constantly pushes me to achieve",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_ach_03",
+          "strength": "ACHIEVER",
+          "text_ar": "أضع قوائم مهام وأشعر بالرضا عند إنجازها",
+          "text_en": "I make to-do lists and feel satisfied when completing them",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_dis_01",
+          "strength": "DISCIPLINE",
+          "text_ar": "أحب أن يكون لكل شيء مكانه ونظامه",
+          "text_en": "I like everything to have its place and order",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_dis_02",
+          "strength": "DISCIPLINE",
+          "text_ar": "الروتين والجداول المنظمة تساعدني على الإنتاجية",
+          "text_en": "Routines and organized schedules help my productivity",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_dis_03",
+          "strength": "DISCIPLINE",
+          "text_ar": "أجد صعوبة في العمل في بيئة فوضوية",
+          "text_en": "I find it difficult to work in a chaotic environment",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_foc_01",
+          "strength": "FOCUS",
+          "text_ar": "أحتاج لأهداف واضحة لأعمل بفعالية",
+          "text_en": "I need clear goals to work effectively",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_foc_02",
+          "strength": "FOCUS",
+          "text_ar": "أستطيع التركيز على هدف واحد لفترات طويلة",
+          "text_en": "I can concentrate on one goal for long periods",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_foc_03",
+          "strength": "FOCUS",
+          "text_ar": "أتجنب المشتتات التي تبعدني عن أهدافي",
+          "text_en": "I avoid distractions that take me away from my goals",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_res_01",
+          "strength": "RESPONSIBILITY",
+          "text_ar": "أشعر بالالتزام الشديد تجاه وعودي والتزاماتي",
+          "text_en": "I feel a strong commitment to my promises and obligations",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_res_02",
+          "strength": "RESPONSIBILITY",
+          "text_ar": "أتحمل مسؤولية أفعالي حتى لو أخطأت",
+          "text_en": "I take responsibility for my actions even when I make mistakes",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_res_03",
+          "strength": "RESPONSIBILITY",
+          "text_ar": "الناس يثقون بي لأنني أفي بما أقول",
+          "text_en": "People trust me because I deliver on what I say",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_com_01",
+          "strength": "COMMUNICATION",
+          "text_ar": "أستمتع بالتحدث وشرح الأفكار للآخرين",
+          "text_en": "I enjoy talking and explaining ideas to others",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_com_02",
+          "strength": "COMMUNICATION",
+          "text_ar": "أستطيع تحويل الأفكار المعقدة إلى كلمات بسيطة",
+          "text_en": "I can turn complex ideas into simple words",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_com_03",
+          "strength": "COMMUNICATION",
+          "text_ar": "أحب سرد القصص واستخدام الأمثلة",
+          "text_en": "I like telling stories and using examples",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_cmd_01",
+          "strength": "COMMAND",
+          "text_ar": "لا أخشى اتخاذ القرارات الصعبة",
+          "text_en": "I'm not afraid to make tough decisions",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_cmd_02",
+          "strength": "COMMAND",
+          "text_ar": "أتولى القيادة بشكل طبيعي في المجموعات",
+          "text_en": "I naturally take charge in group settings",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_cmd_03",
+          "strength": "COMMAND",
+          "text_ar": "أعبر عن رأيي بوضوح حتى لو اختلف مع الآخرين",
+          "text_en": "I express my opinion clearly even if it differs from others",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_emp_01",
+          "strength": "EMPATHY",
+          "text_ar": "أستطيع الشعور بما يشعر به الآخرون",
+          "text_en": "I can sense what others are feeling",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_emp_02",
+          "strength": "EMPATHY",
+          "text_ar": "أفهم وجهات نظر الآخرين بسهولة",
+          "text_en": "I easily understand others' perspectives",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_emp_03",
+          "strength": "EMPATHY",
+          "text_ar": "الناس يشاركونني مشاكلهم لأنهم يشعرون أنني أفهمهم",
+          "text_en": "People share their problems with me because they feel I understand them",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_har_01",
+          "strength": "HARMONY",
+          "text_ar": "أسعى لإيجاد أرضية مشتركة بين المختلفين",
+          "text_en": "I seek to find common ground between those who differ",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_har_02",
+          "strength": "HARMONY",
+          "text_ar": "أتجنب الصراعات غير الضرورية",
+          "text_en": "I avoid unnecessary conflicts",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_har_03",
+          "strength": "HARMONY",
+          "text_ar": "أعمل على بناء التوافق في الفريق",
+          "text_en": "I work to build consensus in the team",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_ana_01",
+          "strength": "ANALYTICAL",
+          "text_ar": "أحب تحليل البيانات والبحث عن الأنماط",
+          "text_en": "I like analyzing data and looking for patterns",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_ana_02",
+          "strength": "ANALYTICAL",
+          "text_ar": "أطلب الأدلة والبراهين قبل تصديق الادعاءات",
+          "text_en": "I ask for evidence and proof before believing claims",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_ana_03",
+          "strength": "ANALYTICAL",
+          "text_ar": "أستمتع بتفكيك المشكلات المعقدة",
+          "text_en": "I enjoy breaking down complex problems",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_str_01",
+          "strength": "STRATEGIC",
+          "text_ar": "أستطيع رؤية المسارات المختلفة لتحقيق الهدف",
+          "text_en": "I can see different paths to achieve a goal",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_str_02",
+          "strength": "STRATEGIC",
+          "text_ar": "أتوقع العقبات وأخطط لتجاوزها مسبقاً",
+          "text_en": "I anticipate obstacles and plan to overcome them in advance",
+          "reverse_scored": false
+        },
+        {
+          "id": "str_str_03",
+          "strength": "STRATEGIC",
+          "text_ar": "أختار أفضل الطرق لتحقيق الأهداف بكفاءة",
+          "text_en": "I choose the best ways to achieve goals efficiently",
+          "reverse_scored": false
+        }
+      ]
+    },
+    "emotional_intelligence": {
+      "name": {
+        "ar": "تقييم الذكاء العاطفي",
+        "en": "Emotional Intelligence (EQ) Assessment"
+      },
+      "total_questions": 30,
+      "dimensions": {
+        "SELF_AWARENESS": {
+          "ar": "الوعي الذاتي",
+          "en": "Self-Awareness"
+        },
+        "SELF_REGULATION": {
+          "ar": "تنظيم الذات",
+          "en": "Self-Regulation"
+        },
+        "MOTIVATION": {
+          "ar": "التحفيز الذاتي",
+          "en": "Motivation"
+        },
+        "EMPATHY": {
+          "ar": "التعاطف",
+          "en": "Empathy"
+        },
+        "SOCIAL_SKILLS": {
+          "ar": "المهارات الاجتماعية",
+          "en": "Social Skills"
+        }
+      },
+      "questions": [
+        {
+          "id": "eq_sa_01",
+          "dimension": "SELF_AWARENESS",
+          "text_ar": "أستطيع التعرف على مشاعري بسهولة عندما أشعر بها",
+          "text_en": "I can easily recognize my feelings when I experience them",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sa_02",
+          "dimension": "SELF_AWARENESS",
+          "text_ar": "أفهم كيف تؤثر مشاعري على قراراتي وسلوكي",
+          "text_en": "I understand how my emotions affect my decisions and behavior",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sa_03",
+          "dimension": "SELF_AWARENESS",
+          "text_ar": "أعرف نقاط قوتي وضعفي بوضوح",
+          "text_en": "I clearly know my strengths and weaknesses",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sa_04",
+          "dimension": "SELF_AWARENESS",
+          "text_ar": "أتقبل النقد البناء وأستفيد منه",
+          "text_en": "I accept constructive criticism and benefit from it",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sa_05",
+          "dimension": "SELF_AWARENESS",
+          "text_ar": "أستطيع وصف مشاعري بدقة للآخرين",
+          "text_en": "I can accurately describe my feelings to others",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sa_06",
+          "dimension": "SELF_AWARENESS",
+          "text_ar": "أدرك تأثير مزاجي على من حولي",
+          "text_en": "I'm aware of how my mood affects those around me",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sr_01",
+          "dimension": "SELF_REGULATION",
+          "text_ar": "أستطيع التحكم في انفعالاتي في المواقف الصعبة",
+          "text_en": "I can control my reactions in difficult situations",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sr_02",
+          "dimension": "SELF_REGULATION",
+          "text_ar": "أفكر قبل أن أتصرف عندما أكون منزعجاً",
+          "text_en": "I think before acting when I'm upset",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sr_03",
+          "dimension": "SELF_REGULATION",
+          "text_ar": "أستطيع تهدئة نفسي عندما أشعر بالغضب",
+          "text_en": "I can calm myself down when I feel angry",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sr_04",
+          "dimension": "SELF_REGULATION",
+          "text_ar": "أتكيف بسهولة مع التغييرات غير المتوقعة",
+          "text_en": "I adapt easily to unexpected changes",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sr_05",
+          "dimension": "SELF_REGULATION",
+          "text_ar": "أتجنب اتخاذ قرارات متسرعة عندما أكون متوتراً",
+          "text_en": "I avoid making hasty decisions when I'm stressed",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_sr_06",
+          "dimension": "SELF_REGULATION",
+          "text_ar": "أستطيع إدارة توتري بطرق صحية",
+          "text_en": "I can manage my stress in healthy ways",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_mot_01",
+          "dimension": "MOTIVATION",
+          "text_ar": "أعمل بجد حتى عندما لا يراقبني أحد",
+          "text_en": "I work hard even when no one is watching",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_mot_02",
+          "dimension": "MOTIVATION",
+          "text_ar": "أسعى للتميز في كل ما أقوم به",
+          "text_en": "I strive for excellence in everything I do",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_mot_03",
+          "dimension": "MOTIVATION",
+          "text_ar": "لا أستسلم بسهولة أمام العقبات",
+          "text_en": "I don't give up easily when facing obstacles",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_mot_04",
+          "dimension": "MOTIVATION",
+          "text_ar": "أجد حماساً داخلياً لتحقيق أهدافي",
+          "text_en": "I find internal enthusiasm to achieve my goals",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_mot_05",
+          "dimension": "MOTIVATION",
+          "text_ar": "أتعلم من إخفاقاتي وأستمر في المحاولة",
+          "text_en": "I learn from my failures and keep trying",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_mot_06",
+          "dimension": "MOTIVATION",
+          "text_ar": "أضع أهدافاً طموحة وأسعى لتحقيقها",
+          "text_en": "I set ambitious goals and work to achieve them",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_emp_01",
+          "dimension": "EMPATHY",
+          "text_ar": "أستطيع فهم ما يشعر به الآخرون من تعبيرات وجوههم",
+          "text_en": "I can understand what others feel from their facial expressions",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_emp_02",
+          "dimension": "EMPATHY",
+          "text_ar": "أستمع باهتمام لمشاكل الآخرين",
+          "text_en": "I listen attentively to others' problems",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_emp_03",
+          "dimension": "EMPATHY",
+          "text_ar": "أراعي مشاعر الآخرين عند اتخاذ قراراتي",
+          "text_en": "I consider others' feelings when making my decisions",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_emp_04",
+          "dimension": "EMPATHY",
+          "text_ar": "أشعر بما يشعر به الآخرون في المواقف الصعبة",
+          "text_en": "I feel what others feel in difficult situations",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_emp_05",
+          "dimension": "EMPATHY",
+          "text_ar": "أفهم وجهات نظر مختلفة حتى لو لم أتفق معها",
+          "text_en": "I understand different viewpoints even if I don't agree with them",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_emp_06",
+          "dimension": "EMPATHY",
+          "text_ar": "أستطيع قراءة لغة الجسد والإشارات غير اللفظية",
+          "text_en": "I can read body language and non-verbal cues",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_ss_01",
+          "dimension": "SOCIAL_SKILLS",
+          "text_ar": "أستطيع بناء علاقات جيدة مع أشخاص مختلفين",
+          "text_en": "I can build good relationships with different people",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_ss_02",
+          "dimension": "SOCIAL_SKILLS",
+          "text_ar": "أجيد حل الخلافات بين الآخرين",
+          "text_en": "I'm good at resolving conflicts between others",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_ss_03",
+          "dimension": "SOCIAL_SKILLS",
+          "text_ar": "أستطيع إقناع الآخرين بأفكاري",
+          "text_en": "I can persuade others with my ideas",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_ss_04",
+          "dimension": "SOCIAL_SKILLS",
+          "text_ar": "أعمل بفعالية ضمن فريق متنوع",
+          "text_en": "I work effectively in a diverse team",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_ss_05",
+          "dimension": "SOCIAL_SKILLS",
+          "text_ar": "أستطيع تحفيز الآخرين وإلهامهم",
+          "text_en": "I can motivate and inspire others",
+          "reverse_scored": false
+        },
+        {
+          "id": "eq_ss_06",
+          "dimension": "SOCIAL_SKILLS",
+          "text_ar": "أتواصل بوضوح وفعالية مع الآخرين",
+          "text_en": "I communicate clearly and effectively with others",
+          "reverse_scored": false
+        }
+      ]
+    },
+    "conflict_styles": {
+      "name": {
+        "ar": "أساليب إدارة النزاعات",
+        "en": "Conflict Management Styles"
+      },
+      "total_questions": 20,
+      "styles": {
+        "COMPETING": {
+          "ar": "التنافسي",
+          "en": "Competing"
+        },
+        "COLLABORATING": {
+          "ar": "التعاوني",
+          "en": "Collaborating"
+        },
+        "COMPROMISING": {
+          "ar": "التوفيقي",
+          "en": "Compromising"
+        },
+        "AVOIDING": {
+          "ar": "التجنبي",
+          "en": "Avoiding"
+        },
+        "ACCOMMODATING": {
+          "ar": "التكيفي",
+          "en": "Accommodating"
+        }
+      },
+      "questions": [
+        {
+          "id": "conf_comp_01",
+          "style": "COMPETING",
+          "text_ar": "أسعى للفوز في الخلافات حتى لو أزعج ذلك الآخرين",
+          "text_en": "I strive to win arguments even if it upsets others",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_comp_02",
+          "style": "COMPETING",
+          "text_ar": "أدافع بقوة عن موقفي ولا أتنازل بسهولة",
+          "text_en": "I strongly defend my position and don't give in easily",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_comp_03",
+          "style": "COMPETING",
+          "text_ar": "أستخدم نفوذي للحصول على ما أريد",
+          "text_en": "I use my influence to get what I want",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_comp_04",
+          "style": "COMPETING",
+          "text_ar": "أعتقد أن الحسم مهم حتى لو لم يرض الجميع",
+          "text_en": "I believe decisiveness is important even if not everyone is pleased",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_coll_01",
+          "style": "COLLABORATING",
+          "text_ar": "أسعى لإيجاد حل يرضي جميع الأطراف",
+          "text_en": "I seek solutions that satisfy all parties",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_coll_02",
+          "style": "COLLABORATING",
+          "text_ar": "أستمع لجميع وجهات النظر قبل اتخاذ قرار",
+          "text_en": "I listen to all viewpoints before making a decision",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_coll_03",
+          "style": "COLLABORATING",
+          "text_ar": "أحاول فهم احتياجات الآخرين ودمجها مع احتياجاتي",
+          "text_en": "I try to understand others' needs and integrate them with mine",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_coll_04",
+          "style": "COLLABORATING",
+          "text_ar": "أؤمن بأن الحوار المفتوح يؤدي لأفضل النتائج",
+          "text_en": "I believe open dialogue leads to the best outcomes",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_compr_01",
+          "style": "COMPROMISING",
+          "text_ar": "أبحث عن حل وسط يرضي الجميع جزئياً",
+          "text_en": "I look for a middle ground that partially satisfies everyone",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_compr_02",
+          "style": "COMPROMISING",
+          "text_ar": "أتنازل عن بعض مطالبي مقابل تنازل الآخرين",
+          "text_en": "I give up some of my demands in exchange for others doing the same",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_compr_03",
+          "style": "COMPROMISING",
+          "text_ar": "أفضل الحلول السريعة على المثالية",
+          "text_en": "I prefer quick solutions over perfect ones",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_compr_04",
+          "style": "COMPROMISING",
+          "text_ar": "أعتقد أن التسوية أفضل من الصراع المستمر",
+          "text_en": "I believe compromise is better than ongoing conflict",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_avoid_01",
+          "style": "AVOIDING",
+          "text_ar": "أتجنب الدخول في خلافات كلما أمكن",
+          "text_en": "I avoid getting into conflicts whenever possible",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_avoid_02",
+          "style": "AVOIDING",
+          "text_ar": "أؤجل التعامل مع المشاكل أملاً في حلها تلقائياً",
+          "text_en": "I postpone dealing with problems hoping they'll resolve themselves",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_avoid_03",
+          "style": "AVOIDING",
+          "text_ar": "أفضل الصمت على الدخول في جدال",
+          "text_en": "I prefer silence over getting into an argument",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_avoid_04",
+          "style": "AVOIDING",
+          "text_ar": "أبتعد عن المواضيع المثيرة للجدل",
+          "text_en": "I stay away from controversial topics",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_accom_01",
+          "style": "ACCOMMODATING",
+          "text_ar": "أتنازل عن موقفي للحفاظ على العلاقة",
+          "text_en": "I give up my position to preserve the relationship",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_accom_02",
+          "style": "ACCOMMODATING",
+          "text_ar": "أضع احتياجات الآخرين قبل احتياجاتي",
+          "text_en": "I put others' needs before my own",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_accom_03",
+          "style": "ACCOMMODATING",
+          "text_ar": "أوافق على طلبات الآخرين لتجنب الخلاف",
+          "text_en": "I agree to others' requests to avoid conflict",
+          "reverse_scored": false
+        },
+        {
+          "id": "conf_accom_04",
+          "style": "ACCOMMODATING",
+          "text_ar": "أعتقد أن السلام أهم من الفوز في الجدال",
+          "text_en": "I believe peace is more important than winning an argument",
+          "reverse_scored": false
+        }
+      ]
+    }
+  }
+}
