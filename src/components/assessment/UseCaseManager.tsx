@@ -15,7 +15,7 @@ import { calculateAttachment } from "@/lib/assessments/scoring/attachment";
 import { calculateLoveLanguages } from "@/lib/assessments/scoring/love-languages";
 import { calculateStrengths } from "@/lib/assessments/scoring/strengths";
 import { calculateEQ } from "@/lib/assessments/scoring/eq";
-import { calculateConflict } from "@/lib/assessments/scoring/conflict";
+import { calculateConflictStyle } from "@/lib/assessments/scoring/conflict";
 
 interface UseCaseManagerProps {
     useCase: UseCaseConfig;
@@ -100,7 +100,7 @@ export function UseCaseManager({ useCase, lang, sessionId }: UseCaseManagerProps
         }
 
         if (answers['conflict']) {
-            const res = calculateConflict(answers['conflict']);
+            const res = calculateConflictStyle(answers['conflict']);
             resultsToSave.conflict_style = res.label;
             resultsToSave.conflict_scores = res.scores;
         }
