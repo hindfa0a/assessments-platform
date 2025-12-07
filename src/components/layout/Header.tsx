@@ -87,6 +87,11 @@ export function Header({ lang }: { lang: string }) {
                             <div className="text-sm font-medium text-slate-700 px-2 break-all">
                                 {user.email}
                             </div>
+                            <Link href={`/${lang}/dashboard`}>
+                                <Button variant="ghost" className="w-full justify-start text-slate-700">
+                                    {isAr ? "لوحة التحكم" : "Dashboard"}
+                                </Button>
+                            </Link>
                             <Button variant="outline" onClick={handleLogout} className="w-full justify-start text-red-500">
                                 <LogOut className="w-4 h-4 mr-2" />
                                 {isAr ? "خروج" : "Logout"}

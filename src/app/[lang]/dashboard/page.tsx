@@ -11,7 +11,7 @@ import { createClient } from "@/lib/supabase/server";
 export default async function DashboardPage({ params }: { params: { lang: string } }) {
     const lang = params.lang;
     const isAr = lang === 'ar';
-    const supabase = createClient();
+    const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
 
     if (!user) {
