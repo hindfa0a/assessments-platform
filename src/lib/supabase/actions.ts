@@ -123,6 +123,7 @@ export async function saveAssessmentSession(
         const { data, error } = await dbClient
             .from('assessment_sessions')
             .update({
+                user_id: user.id, // CLAIM/LINK session to current user
                 status: 'completed',
                 completed_at: new Date().toISOString(),
                 ...results // Spread results if provided (e.g. mbti_type, scores)
