@@ -9,6 +9,13 @@ import { Button } from "@/components/ui/button";
 import { saveAssessmentSession } from "@/lib/supabase/actions";
 import { calculateMBTI } from "@/lib/assessments/scoring/mbti";
 import { calculateHolland } from "@/lib/assessments/scoring/holland";
+import { calculateBigFive } from "@/lib/assessments/scoring/big-five";
+import { calculateWorkValues } from "@/lib/assessments/scoring/work-values";
+import { calculateAttachment } from "@/lib/assessments/scoring/attachment";
+import { calculateLoveLanguages } from "@/lib/assessments/scoring/love-languages";
+import { calculateStrengths } from "@/lib/assessments/scoring/strengths";
+import { calculateEQ } from "@/lib/assessments/scoring/eq";
+import { calculateConflict } from "@/lib/assessments/scoring/conflict";
 
 interface UseCaseManagerProps {
     useCase: UseCaseConfig;
@@ -61,6 +68,42 @@ export function UseCaseManager({ useCase, lang, sessionId }: UseCaseManagerProps
         }
 
         // Add others as needed (big_five, etc.)
+        if (answers['big_five']) {
+            const res = calculateBigFive(answers['big_five']);
+            resultsToSave.big_five_scores = res.scores;
+        }
+
+        if (answers['work_values']) {
+            const res = calculateWorkValues(answers['work_values']);
+            resultsToSave.work_values_scores = res.scores;
+        }
+
+        if (answers['attachment']) {
+            const res = calculateAttachment(answers['attachment']);
+            resultsToSave.attachment_style = res.label;
+            resultsToSave.attachment_scores = res.scores;
+        }
+
+        if (answers['love_languages']) {
+            const res = calculateLoveLanguages(answers['love_languages']);
+            resultsToSave.love_languages_scores = res.scores;
+        }
+
+        if (answers['strengths']) {
+            const res = calculateStrengths(answers['strengths']);
+            resultsToSave.strengths_scores = res.scores;
+        }
+
+        if (answers['eq']) {
+            const res = calculateEQ(answers['eq']);
+            resultsToSave.eq_scores = res.scores;
+        }
+
+        if (answers['conflict']) {
+            const res = calculateConflict(answers['conflict']);
+            resultsToSave.conflict_style = res.label;
+            resultsToSave.conflict_scores = res.scores;
+        }
 
         // Save to Real DB
         try {
