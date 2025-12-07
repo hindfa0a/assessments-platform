@@ -45,7 +45,13 @@ export async function POST(req: NextRequest) {
         const resultsContext = {
             mbti: { type: session.mbti_type, scores: session.mbti_scores },
             holland: { code: session.holland_code, scores: session.holland_scores },
-            // Add other tools as they become available
+            big_five: { scores: session.big_five_scores },
+            work_values: { scores: session.work_values_scores },
+            attachment: { style: session.attachment_style, scores: session.attachment_scores },
+            love_languages: { scores: session.love_languages_scores },
+            strengths: { scores: session.strengths_scores },
+            eq: { scores: session.eq_scores },
+            conflict: { style: session.conflict_style, scores: session.conflict_scores },
         };
 
 
