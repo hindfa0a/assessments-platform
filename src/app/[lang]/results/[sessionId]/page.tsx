@@ -52,12 +52,68 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
         teamData = await checkTeamStatus(session.share_code);
     }
 
-    // MOCK DATA (Ideally fetch processed results from DB)
-    const mockResults = {
-        mbti: { type: "INTJ", nameAr: "المهندس المعماري", nameEn: "The Architect", descAr: "مفكر استراتيجي...", descEn: "Strategic thinker..." },
-        holland: { code: "RIA", topInterests: ["Realistic", "Investigative", "Artistic"] },
-        bigFive: { highTraits: isAr ? ["الانبساط", "الانفتاح"] : ["Extraversion", "Openness"] },
-        workValues: { topValues: isAr ? ["الإنجاز", "الاستقلالية"] : ["Achievement", "Independence"] }
+    // PROCESS REAL RESULTS
+    const mbtiResult = {
+        type: session?.mbti_type || "N/A",
+        nameAr: session?.mbti_type ? (isAr ? "النمط" : "The Type") : "", // Placeholder, better to have a map
+        nameEn: session?.mbti_type || "",
+        descAr: session?.mbti_type ? "تحليل شخصيتك بناءً على إجاباتك." : "",
+        descEn: "Your personality analysis based on your answers."
+    };
+
+    const hollandResult = {
+        code: session?.holland_code || "N/A",
+        topInterests: session?.holland_scores ?
+            Object.entries(session.holland_scores)
+                .sort(([, a], [, b]) => (b as number) - (a as number))
+                .slice(0, 3)
+                .map(([k]) => k)
+            : []
+    };
+
+    // Big Five Logic
+    let bigFiveHighTraits: string[] = [];
+    let bigFiveScores = session?.big_five_scores || {};
+    if (Object.keys(bigFiveScores).length > 0) {
+        const TRAIT_NAMES: Record<string, { ar: string, en: string, descAr: string, descEn: string }> = {
+            'O': { ar: 'الانفتاح', en: 'Openness', descAr: 'تتميز بالخيال والفضول والإبداع.', descEn: 'Creative, curious, and open to new ideas.' },
+            'C': { ar: 'الضمير الحي', en: 'Conscientiousness', descAr: 'تتميز بالتنظيم والمسؤولية والموثوقية.', descEn: 'Organized, dependable, and disciplined.' },
+            'E': { ar: 'الانبساط', en: 'Extraversion', descAr: 'تتميز بالطاقة والاجتماعية والحزم.', descEn: 'Energetic, sociable, and assertive.' },
+            'A': { ar: 'المقبولية', en: 'Agreeableness', descAr: 'تتميز بالتعاطف والتعاون والثقة.', descEn: 'Compassionate, cooperative, and trusting.' },
+            'N': { ar: 'العصابية', en: 'Neuroticism', descAr: 'تتميز بالحساسية العاطفية والقلق.', descEn: 'Sensitive, nervous, and prone to worry.' }
+        };
+
+        bigFiveHighTraits = Object.entries(bigFiveScores)
+            .sort(([, a], [, b]) => (b as number) - (a as number))
+            .slice(0, 2)
+            .map(([k]) => isAr ? `${TRAIT_NAMES[k].ar}: ${TRAIT_NAMES[k].descAr}` : `${TRAIT_NAMES[k].en}: ${TRAIT_NAMES[k].descEn}`);
+    }
+
+    // Work Values Logic
+    let workValuesTop: string[] = [];
+    let workValuesScores = session?.work_values_scores || {};
+    if (Object.keys(workValuesScores).length > 0) {
+        const VALUE_NAMES: Record<string, { ar: string, en: string }> = {
+            'ACHIEVEMENT': { ar: 'الإنجاز', en: 'Achievement' },
+            'INDEPENDENCE': { ar: 'الاستقلالية', en: 'Independence' },
+            'RECOGNITION': { ar: 'التقدير', en: 'Recognition' },
+            'RELATIONSHIPS': { ar: 'العلاقات', en: 'Relationships' },
+            'SUPPORT': { ar: 'الدعم', en: 'Support' },
+            'WORKING_CONDITIONS': { ar: 'ظروف العمل', en: 'Working Conditions' }
+        };
+
+        workValuesTop = Object.entries(workValuesScores)
+            .sort(([, a], [, b]) => (b as number) - (a as number))
+            .slice(0, 3)
+            .map(([k]) => isAr ? VALUE_NAMES[k]?.ar || k : VALUE_NAMES[k]?.en || k);
+    }
+
+    // Prepare Results Object
+    const resultsData = {
+        mbti: mbtiResult,
+        holland: hollandResult,
+        bigFive: { highTraits: bigFiveHighTraits },
+        workValues: { topValues: workValuesTop }
     };
 
     return (
@@ -114,9 +170,9 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
                             <CardContent>
                                 <div className="flex items-center justify-between">
                                     <div>
-                                        <h2 className="text-4xl font-extrabold text-purple-600 mb-2">{mockResults.mbti.type}</h2>
-                                        <h3 className="text-xl font-semibold mb-2">{isAr ? mockResults.mbti.nameAr : mockResults.mbti.nameEn}</h3>
-                                        <p className="text-muted-foreground">{isAr ? mockResults.mbti.descAr : mockResults.mbti.descEn}</p>
+                                        <h2 className="text-4xl font-extrabold text-purple-600 mb-2">{resultsData.mbti.type}</h2>
+                                        <h3 className="text-xl font-semibold mb-2">{isAr ? resultsData.mbti.nameAr : resultsData.mbti.nameEn}</h3>
+                                        <p className="text-muted-foreground">{isAr ? resultsData.mbti.descAr : resultsData.mbti.descEn}</p>
                                     </div>
                                 </div>
                             </CardContent>
@@ -128,9 +184,9 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
                             <CardHeader><CardTitle>{isAr ? "الميول المهنية (Holland)" : "Career Interests (Holland)"}</CardTitle></CardHeader>
                             <CardContent>
                                 <div>
-                                    <h2 className="text-4xl font-extrabold text-blue-600 mb-2">{mockResults.holland.code}</h2>
+                                    <h2 className="text-4xl font-extrabold text-blue-600 mb-2">{resultsData.holland.code}</h2>
                                     <div className="flex gap-2 mt-2">
-                                        {mockResults.holland.topInterests.map(interest => (
+                                        {resultsData.holland.topInterests.map(interest => (
                                             <span key={interest} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">{interest}</span>
                                         ))}
                                     </div>
@@ -146,7 +202,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
                             <CardContent>
                                 <p className="mb-2 font-semibold">{isAr ? "أبرز السمات:" : "High Traits:"}</p>
                                 <div className="flex gap-2">
-                                    {mockResults.bigFive.highTraits.map(trait => (
+                                    {resultsData.bigFive.highTraits.map(trait => (
                                         <span key={trait} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">{trait}</span>
                                     ))}
                                 </div>
@@ -160,7 +216,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ lang: 
                             <CardContent>
                                 <p className="mb-2 font-semibold">{isAr ? "القيم العليا:" : "Top Values:"}</p>
                                 <div className="flex gap-2">
-                                    {mockResults.workValues.topValues.map(val => (
+                                    {resultsData.workValues.topValues.map(val => (
                                         <span key={val} className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">{val}</span>
                                     ))}
                                 </div>
