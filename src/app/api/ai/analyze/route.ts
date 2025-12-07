@@ -56,12 +56,23 @@ export async function POST(req: NextRequest) {
 
 
         const systemPrompt = getSystemPrompt(session.use_case || 'major_selection', lang || 'ar');
+
+        // Dynamically build user message based on available data
+        let resultsText = "";
+        if (resultsContext.mbti.type || resultsContext.mbti.scores) resultsText += `MBTI: ${JSON.stringify(resultsContext.mbti)}\n`;
+        if (resultsContext.holland.code || resultsContext.holland.scores) resultsText += `Holland Code: ${JSON.stringify(resultsContext.holland)}\n`;
+        if (resultsContext.big_five.scores) resultsText += `Big Five: ${JSON.stringify(resultsContext.big_five)}\n`;
+        if (resultsContext.work_values.scores) resultsText += `Work Values: ${JSON.stringify(resultsContext.work_values)}\n`;
+        if (resultsContext.attachment.style) resultsText += `Attachment Style: ${JSON.stringify(resultsContext.attachment)}\n`;
+        if (resultsContext.strengths.scores) resultsText += `Strengths: ${JSON.stringify(resultsContext.strengths)}\n`;
+        if (resultsContext.eq.scores) resultsText += `Emotional Intelligence: ${JSON.stringify(resultsContext.eq)}\n`;
+        if (resultsContext.conflict.style) resultsText += `Conflict Style: ${JSON.stringify(resultsContext.conflict)}\n`;
+
         const userMessage = `
-        نتائج الطالب:
-        MBTI: ${JSON.stringify(resultsContext.mbti)}
-        Holland Code: ${JSON.stringify(resultsContext.holland)}
+        نتائج العميل/الطالب:
+        ${resultsText}
         
-        يرجى تقديم التحليل والتوصيات.
+        يرجى تقديم التحليل والتوصيات بناءً على هذه النتائج.
         `;
 
         // 4. Call OpenAI API (Streaming)
