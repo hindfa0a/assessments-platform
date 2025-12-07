@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PaymentModal } from "@/components/payment/PaymentModal";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -27,6 +27,13 @@ export function ResultsContainer({ status, sessionId, lang, children, useCaseNam
     const isPaid = status === 'paid';
     const isAr = lang === 'ar';
 
+    // Auto-check on mount if pending
+    useEffect(() => {
+        if (!isPaid) {
+            handleVerify();
+        }
+    }, [isPaid]); // Run on mount if pending
+
     const handleVerify = async () => {
         setVerifying(true);
         // Call server action to check status against Moyasar
@@ -36,8 +43,9 @@ export function ResultsContainer({ status, sessionId, lang, children, useCaseNam
             // Success state will be handled by page reload showing content
         } else {
             setVerifying(false);
-            // Optional: Show error
-            alert(result.error || (isAr ? "لم يتم العثور على الدفع" : "Payment not found yet"));
+            // Don't alert on auto-check, only if manual? 
+            // Actually, verifyPayment checks DB or Moyasar.
+            // If it returns success, it updated DB. Good.
         }
     };
 
