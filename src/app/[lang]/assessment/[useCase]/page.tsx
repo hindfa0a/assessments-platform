@@ -13,6 +13,16 @@ interface PageProps {
 export default async function AssessmentPage({ params, searchParams }: PageProps) {
     const { lang, useCase: useCaseId } = await params;
 
+    // MANDATORY AUTH CHECK
+    const { createClient } = await import("@/lib/supabase/server");
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
+    if (!user) {
+        const { redirect } = await import("next/navigation");
+        redirect(`/${lang}/login?next=/${lang}/assessment/${useCaseId}`);
+    }
+
     // Extract sessionId if present (for join flow)
     const { sessionId } = await searchParams;
     const resolvedSessionId = Array.isArray(sessionId) ? sessionId[0] : sessionId;
