@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
-export default async function DashboardPage({ params }: { params: { lang: string } }) {
-    const lang = params.lang;
+export default async function DashboardPage({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
     const isAr = lang === 'ar';
     const supabase = await createClient();
     const { data: { user } } = await supabase.auth.getUser();
